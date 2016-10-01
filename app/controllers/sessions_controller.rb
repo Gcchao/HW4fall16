@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     @user = User.find_by user_id: session_params[:user_id], email: session_params[:email]
     if @user
       session[:session_token] =@user.session_token
-      flash[:notice] = "Your are lagin as #{@user.user_id}."
+      #flash[:notice] = "Your are lagin as #{@user.user_id}."
       redirect_to movies_path
 
     else
